@@ -1,0 +1,156 @@
+.quest-drawer-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    pointer-events: none; // 빈 공간 클릭 통과
+
+    .quest-toggle-btn {
+        pointer-events: auto;
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+        }
+    }
+
+    .quest-drawer-panel {
+        pointer-events: auto;
+        margin-top: 15px;
+        width: 320px;
+        background: rgba(44, 62, 80, 0.95);
+        border: 2px solid #34495e;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: -5px 5px 20px rgba(0,0,0,0.5);
+        clear: both;
+        
+        // 부드러운 슬라이드 애니메이션
+        transform: translateX(120%);
+        opacity: 0;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+
+        &.open {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+
+            h2 {
+                margin: 0;
+                border: none;
+                padding: 0;
+            }
+
+            .exit-btn {
+                padding: 8px 16px;
+                background-color: #e74c3c;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 0.95rem;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.2s;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+                &:hover {
+                    background-color: #c0392b;
+                }
+            }
+        }
+
+        h3 {
+            color: #f1c40f;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .quest-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #7f8c8d;
+                border-radius: 3px;
+            }
+
+            .quest-item {
+                background: rgba(52, 73, 94, 0.8);
+                border-radius: 8px;
+                padding: 12px;
+                border-left: 4px solid #f1c40f;
+                transition: background 0.3s, opacity 0.3s;
+
+                &.completed {
+                    opacity: 0.6;
+                    border-left-color: #2ecc71;
+                    background: rgba(39, 174, 96, 0.2);
+
+                    .quest-title {
+                        text-decoration: line-through;
+                        color: #95a5a6;
+                    }
+                }
+
+                .quest-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 8px;
+
+                    .quest-title {
+                        margin: 0;
+                        font-size: 1.1rem;
+                        color: #fff;
+                    }
+
+                    .quest-reward {
+                        font-size: 0.9rem;
+                        color: #f1c40f;
+                        font-weight: bold;
+                        background: rgba(0, 0, 0, 0.3);
+                        padding: 2px 6px;
+                        border-radius: 4px;
+                    }
+                }
+
+                .quest-desc {
+                    margin: 0;
+                    font-size: 0.85rem;
+                    color: #bdc3c7;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "불": {
+    "burnDurationMs": 2000,
+    "burnDamagePerSec": 10
+  },
+  "빙결": {
+    "slowDurationMs": 1000,
+    "slowMultiplier": 0.5,
+    "freezeChance": 0.05,
+    "freezeDurationMs": 1000
+  },
+  "바람": {
+    "knockbackChance": 0.05,
+    "knockbackBaseDistance": 0.2,
+    "knockbackLevelMultiplier": 0.1
+  },
+  "빛": {
+    "auraRadius": 2.5,
+    "auraIntervalMs": 1000,
+    "buffDurationMs": 1500,
+    "attackSpeedBonus": 0.5
+  },
+  "어둠": {
+    "auraRadius": 2.5,
+    "auraIntervalMs": 1000,
+    "buffDurationMs": 1500,
+    "damageBonus": 15
+  }
+}

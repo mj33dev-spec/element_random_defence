@@ -1,0 +1,41 @@
+[
+  {
+    "id": "quest_collect_lv1_all",
+    "title": "초보자의 첫 걸음",
+    "description": "모든 속성(불, 빙결, 바람, 빛, 어둠)의 1레벨 캐릭터를 최소 1개씩 필드에 모으세요.",
+    "type": "COLLECT_ALL_ELEMENTS",
+    "targetLevel": 1,
+    "rewardGold": 30
+  },
+  {
+    "id": "quest_collect_lv5_all",
+    "title": "전설의 지휘관",
+    "description": "모든 속성(불, 빙결, 바람, 빛, 어둠)의 5레벨(만렙) 캐릭터를 최소 1개씩 필드에 모으세요.",
+    "type": "COLLECT_ALL_ELEMENTS",
+    "targetLevel": 5,
+    "rewardGold": 500
+  },
+  {
+    "id": "quest_collect_weapons",
+    "title": "웨폰 마스터",
+    "description": "종류에 상관없이 검, 표창, 마법구 무기를 각각 최소 1개씩 수집하세요.",
+    "type": "COLLECT_ALL_WEAPONS",
+    "rewardGold": 15
+  },
+  {
+    "id": "quest_first_merge",
+    "title": "성장의 시작",
+    "description": "캐릭터를 합성하여 처음으로 2레벨 캐릭터를 만드세요.",
+    "type": "REACH_LEVEL",
+    "targetLevel": 2,
+    "rewardGold": 10
+  },
+  {
+    "id": "quest_max_level",
+    "title": "궁극의 힘",
+    "description": "어떤 속성이든 최초로 5레벨 캐릭터를 만드세요.",
+    "type": "REACH_LEVEL",
+    "targetLevel": 5,
+    "rewardGold": 50
+  }
+]
